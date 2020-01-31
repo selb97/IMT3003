@@ -7,7 +7,7 @@ $dbpassw = getenv("BF_DB_PASS");
 $webhost = getenv("BF_WEBHOST");
 $imagepath = getenv("BF_IMAGE_PATH");
 $weburl = 'http://' . $webhost ;
-$frontpage_limit = 100000;
+$frontpage_limit = 500;
 if ( getenv("BF_FRONTPAGE_LIMIT") ){
    $frontpage_limit = getenv("BF_FRONTPAGE_LIMIT");
 }
