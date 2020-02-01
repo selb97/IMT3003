@@ -7,3 +7,4 @@ git clone  https://github.com/selb97/IMT3003.git
 cd IMT3003
 cp code/* /var/www/html/
 cp config_example.php /var/www/html/config.php
+service apache2 restart
