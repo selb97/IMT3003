@@ -1,19 +1,9 @@
 <?php
-$dbhost = getenv("BF_DB_HOST");
-$dbport =  getenv("BF_DB_PORT");
-$db = getenv("BF_DB_NAME");
-$dbuser = getenv("BF_DB_USER");
-$dbpassw = getenv("BF_DB_PASS");
-$webhost = getenv("BF_WEBHOST");
-$imagepath = getenv("BF_IMAGE_PATH");
+$dbhost = "192.168.130.11";
+$dbport = "26257";
+$db = "bf";
+$dbuser = "bfuser";
+$dbpassw = '';
+$webhost = '10.212.141.192';
 $weburl = 'http://' . $webhost ;
-$frontpage_limit = 500;
-if ( getenv("BF_FRONTPAGE_LIMIT") ){
-   $frontpage_limit = getenv("BF_FRONTPAGE_LIMIT");
-}
-if ( getenv("BF_MEMCACHE_SERVER")){
-   $memcache_enabled_pictures = 1;
-   $memcache_server = getenv("BF_MEMCACHE_SERVER");
-   $memcache_enabled = 1;
-}
 ?>
