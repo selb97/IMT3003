@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-sudo docker rm -f $(docker ps -qa)
+sudo docker rm -f $(sudo docker ps -qa)
 
 sudo docker build -t w1:6 /home/ubuntu/www1
 
