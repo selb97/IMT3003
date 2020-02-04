@@ -2,7 +2,7 @@
 
 sudo docker rm -f $(sudo docker ps -qa)
 
-sudo docker build -t WebContainer:v9 /home/ubuntu/www
+sudo docker build -t webcontainer:v9 /home/ubuntu/www
 
 sudo docker run -itd -p 32771:80 --name "container1" --restart always webcontainer:v9
 
