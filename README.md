@@ -2,8 +2,8 @@
 
 This is a readme
 
-git add . <br />
+git add . (or specific file name) <br />
 git reset HEAD YOUR-FILE' - to unstage a file.
 
-git commit -m "Test"
-git push
+git commit -m "Test" <br />
+git push <br />
