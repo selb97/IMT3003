@@ -6,5 +6,5 @@ $dbuser = "bfuser";
 $dbpassw = '';
 $webhost = '10.212.141.192';
 $weburl = 'http://' . $webhost ;
-$frontpage_limiter = 500;
+$frontpage_limit = 500;
 ?>
