@@ -2,7 +2,7 @@
 
 sudo docker rm -f $(sudo docker ps -qa)
 
-sudo docker build -t webcontainer:v1 /home/ubuntu/www
+sudo docker build -t webcontainer:v1 /home/ubuntu/bookface
 
 sudo docker run -itd -p 32771:80 --name "container1" --restart always webcontainer:v1
 
