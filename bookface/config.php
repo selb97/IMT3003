@@ -1,5 +1,5 @@
 <?php
-$dbhost = "192.168.132.122";
+$dbhost = 192.168.132.202"";
 $dbport = "26257";
 $db = "bf";
 $dbuser = "bfuser";
