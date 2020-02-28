@@ -2,13 +2,13 @@
 
 wget https://binaries.cockroachdb.com/cockroach-v19.2.2.linux-amd64.tgz
 tar xzf cockroach-v19.2.2.linux-amd64.tgz
-cp cockroach-v19.2.2.linux-amd64/cockroach /usr/local/bin
+sudo cp cockroach-v19.2.2.linux-amd64/cockroach /usr/local/bin
 
-mkdir /bfdata
+sudo mkdir /bfdata
 
-cockroach start --insecure --store=/bfdata --listen-addr=0.0.0.0:26257 --http-addr=0.0.0.0:8080 --background
+sudo cockroach start --insecure --store=/bfdata --listen-addr=0.0.0.0:26257 --http-addr=0.0.0.0:8080 --background
 
-cockroach sql --insecure --host=localhost:26257
+sudo cockroach sql --insecure --host=localhost:26257
 
 CREATE DATABASE bf;
 CREATE USER bfuser;
