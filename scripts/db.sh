@@ -1,7 +1,7 @@
 #!/bin/bash
 
-wget https://binaries.cockroachdb.com/cockroach-v19.2.2.linux-amd64.tgz
-tar xzf cockroach-v19.2.2.linux-amd64.tgz
+sudo wget https://binaries.cockroachdb.com/cockroach-v19.2.2.linux-amd64.tgz
+sudo tar xzf cockroach-v19.2.2.linux-amd64.tgz
 sudo cp cockroach-v19.2.2.linux-amd64/cockroach /usr/local/bin
 
 sudo mkdir /bfdata
