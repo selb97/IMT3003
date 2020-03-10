@@ -1,0 +1,1 @@
+openstack server create --image 1676adb4-9657-42ed-b31f-b3907cbcd697 --flavor 3d0d6b55-971e-4fe6-9c90-f9c059ff70ca --key-name managerKey docker2
