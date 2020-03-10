@@ -1,11 +1,21 @@
+#!/bin/bash
 
-openstack server create \
---image 1676adb4-9657-42ed-b31f-b3907cbcd697 \ #Ubuntu Server 18.04 LTS (Bionic Beaver) amd64 
---flavor 3d0d6b55-971e-4fe6-9c90-f9c059ff70ca \ #	m1.tiny
---key-name managerKey $1
+source IMT3003_V20_group07-openrc.bash
+
+#Ubuntu Server 18.04 LTS (Bionic Beaver) amd64
+#m1.tiny
+
+openstack server create --image 1676adb4-9657-42ed-b31f-b3907cbcd697 --flavor 3d0d6b55-971e-4fe6-9c90-f9c059ff70ca --key-name managerKey $1
 
 sleep 60
 
-IP=$(openstack server $1 | awk 'FNR == 13 {print $4}' | awk -F'=' '{print $2}')
+IP=$(openstack server show $1 | awk 'FNR == 13 {print $4}' | awk -F'=' '{print $2}')
 
-echo $IP
+until ssh -o "StrictHostKeyChecking=no" -t ubuntu@$IP "echo 'Connected!'"; do
+	sleep 5
+done
+
+scp -o "StrictHostKeyChecking=no" installDocker.bash ubuntu@$IP:
+
+ssh -o "StrictHostKeyChecking=no" -t ubuntu@$IP "sudo chmod +x installDocker.bash"
+ssh -o "StrictHostKeyChecking=no" -t ubuntu@$IP "./installDocker.bash"
