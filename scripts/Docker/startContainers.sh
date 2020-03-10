@@ -20,3 +20,4 @@ sudo docker run -itd -p 32777:80 --name "container7" --restart always webcontain
 
 sudo docker run -itd -p 32778:80 --name "container8" --restart always webcontainer:v1
 
+sudo docker run --name=memcache -p 11211:11211 -d memcached memcached -m 128
