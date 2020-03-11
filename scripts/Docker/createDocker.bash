@@ -21,7 +21,7 @@ ssh -o "StrictHostKeyChecking=no" -t ubuntu@$IP "sudo chmod +x installDocker.bas
 ssh -o "StrictHostKeyChecking=no" -t ubuntu@$IP "./installDocker.bash"
 
 
-scp -o "StrictHostKeyChecking=no" /home/ubuntu/IMT3003/bookface ubuntu@$IP:
+scp -r -o "StrictHostKeyChecking=no" /home/ubuntu/IMT3003/bookface/ ubuntu@$IP:
 
 scp -o "StrictHostKeyChecking=no" startContainers.bash ubuntu@$IP:
 
