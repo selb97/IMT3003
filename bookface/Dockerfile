@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN sudo apt-get update && sudo apt-get install -y apache2 libapache2-mod-php php-pgsql && sudo apt-get install -y php-memcache
 
 RUN sudo rm /var/www/html/index.html
-ADD bookface/code/* /var/www/html/
+ADD /code/* /var/www/html/
 
 CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND"]
 
