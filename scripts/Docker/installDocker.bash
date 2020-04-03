@@ -23,7 +23,7 @@ sudo apt-get -y install docker-ce
 sudo docker run hello-world
 docker swarm join --token SWMTKN-1-00lazi3z99sqpv7gr8ss2syb76svlyumgrfqemokf3shcqckyd-enyvlmojidadmunlbl56wgbe9 192.168.128.63:2377
 sudo mkdir -p /etc/docker/certs.d/master:5000
-sudo cp ~IMT3003/registry_certs/domain.cert /etc/docker/certs.d/master:5000/ca.crt
+sudo cp /home/ubuntu/IMT3003/registry_certs/domain.cert /etc/docker/certs.d/master:5000/ca.crt
 sudo service docker restart
 #sudo echo "192.168.130.196 master" >> /etc/hosts
 echo "192.168.128.63 master" | sudo tee -a /etc/hosts
