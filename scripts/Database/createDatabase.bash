@@ -3,9 +3,9 @@
 source IMT3003_V20_group07-openrc.bash
 
 #Ubuntu Server 18.04 LTS (Bionic Beaver) amd64
-#t1.small
+#m1.medium
 
-openstack server create --image 1676adb4-9657-42ed-b31f-b3907cbcd697 --flavor 114f5c26-66f9-44b1-8992-bc9347285725 --key-name managerKey $1
+openstack server create --image 1676adb4-9657-42ed-b31f-b3907cbcd697 --flavor 1ff86526-c425-4b48-87ac-83826e1b7136 --key-name managerKey $1
 
 sleep 60
 

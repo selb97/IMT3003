@@ -6,9 +6,9 @@ sudo cp cockroach-v19.2.2.linux-amd64/cockroach /usr/local/bin
 
 sudo mkdir /bfdata
 
-sudo cockroach start --insecure --store=/bfdata --listen-addr=0.0.0.0:26257 --http-addr=0.0.0.0:8080 --background
+sudo cockroach start --insecure --store=/bfdata --listen-addr=0.0.0.0:26258 --http-addr=0.0.0.0:8080 --background
 
-sudo cockroach sql --insecure --host=localhost:26257
+cockroach sql --insecure --host=localhost:26258
 
 CREATE DATABASE bf;
 CREATE USER bfuser;
