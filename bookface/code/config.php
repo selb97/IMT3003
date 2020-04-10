@@ -7,7 +7,6 @@ $dbpassw = '';
 $webhost = '10.212.141.192';
 $weburl = 'http://' . $webhost ;
 $frontpage_limit = 500;
-?>
 
 $memcache_server = "192.168.128.63:11211";
 $memcache_enabled = 1;
